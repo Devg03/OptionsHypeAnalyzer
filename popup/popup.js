@@ -1,5 +1,5 @@
 const btn = document.getElementById("analyzeButton");
 function displayAlert() {
-    alert("Button was clicked!");
+    chrome.runtime.sendMessage({ action: "analyze" });
 }
 btn.addEventListener("click", displayAlert);
